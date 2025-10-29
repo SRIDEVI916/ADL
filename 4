@@ -1,0 +1,30 @@
+Master
+sudo hostnamectl set-hostname master
+exit
+Refresh
+
+Worker
+sudo hostnamectl set-hostname worker
+exit
+Refresh
+
+Master+Worker
+sudo apt-get update
+sudo apt-get install docker.io
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo systemctl start docker
+
+
+https://kubernetes.io/docs/setup/production-
+environment/tools/kubeadm/install-kubeadm/
+all commands for installing 
+
+
+Master
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=all
+run the three given commands
+
+
+https://kubernetes.io/docs/concepts/cluster-administration/addons/
+copy and paste flannel command on master ----> Flannel created
